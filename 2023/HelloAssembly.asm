@@ -44,6 +44,7 @@ WindowHeight    equ 480
 ; DT or TBYTE: 10
 ; DW or WORD: 16
 
+; below he is creating string constants, a series of bytes that end in 0
 ClassName       db "MyWinClass", 0      ; The name of our Windows class
 AppName         db "Dave's Tiny App", 0 ; The name of our main window
 
