@@ -72,6 +72,7 @@ MainEntry:
     ;ex call printf
     ;uses the stack in reverse order to push the arguments
         call    GetModuleHandle         ; GetModuleHandle will return instance handle in EAX
+    ;mov sends X into Y, in this case it sends eax into hInstance
         mov     hInstance, eax          ; Cache it in our global varible
 
         call    GetCommandLine          ; Get the command line text ptr in EAX to pass on to main
