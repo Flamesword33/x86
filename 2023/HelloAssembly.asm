@@ -81,6 +81,7 @@ MainEntry:
         ; Call our WinMain and then exit the process with whatever comes back
 
         push    SW_SHOWDEFAULT
+    ;lea (load effective address) in this case loads a pointer to CommandLine into eax
         lea     eax, CommandLine
         push    eax
         push    NULL
