@@ -50,6 +50,7 @@ AppName         db "Dave's Tiny App", 0 ; The name of our main window
 
 .DATA?                                  ; Uninitialized data - Basically just reserved address space
 
+; ? means alocate but don't initialize
 hInstance       HINSTANCE ?             ; Instance handle (like the process id) of our application
 CommandLine     LPSTR     ?             ; Pointer to the command line text we were launched with
 
