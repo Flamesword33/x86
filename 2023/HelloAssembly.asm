@@ -31,6 +31,7 @@ WinMain proto :DWORD, :DWORD, :DWORD, :DWORD    ; Forward decl for MainEntry
 
 ; Constants and Data
 
+; equ is a constant
 WindowWidth     equ 640                ; How big we'd like our main window
 WindowHeight    equ 480
 
