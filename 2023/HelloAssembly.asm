@@ -60,6 +60,12 @@ CommandLine     LPSTR     ?             ; Pointer to the command line text we we
 
 MainEntry:
 
+    ;Addressing modes
+    ;   MOV EAX, 14                     ; immediate
+    ;   MOV EAX, AL                     ; register to register
+    ;   MOV R8W, x[y]                   ; indirect (memlocation x+y)
+    ;   MOV AL, [RIP]                   ; RIP-relative x86-64 only, RIP points to the next instruction in this case push NULL on line 70
+
         push    NULL                    ; Get the instance handle of our app (NULL means ourselves)
         call    GetModuleHandle         ; GetModuleHandle will return instance handle in EAX
         mov     hInstance, eax          ; Cache it in our global varible
