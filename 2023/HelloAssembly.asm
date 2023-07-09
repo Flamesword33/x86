@@ -26,6 +26,7 @@ includelib \masm32\lib\gdi32.inc       ; GDI32.dll
 
 ; Forward declarations - Our main entry point will call forward to WinMain, so we need to define it here, ect
 
+; This sets up command line call with 4 arguments
 WinMain proto :DWORD, :DWORD, :DWORD, :DWORD    ; Forward decl for MainEntry
 
 ; Constants and Data
