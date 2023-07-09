@@ -68,6 +68,9 @@ MainEntry:
 
     ;push saves the variable to the stack, pop does the opposite
         push    NULL                    ; Get the instance handle of our app (NULL means ourselves)
+    ;call runs a global function
+    ;ex call printf
+    ;uses the stack in reverse order to push the arguments
         call    GetModuleHandle         ; GetModuleHandle will return instance handle in EAX
         mov     hInstance, eax          ; Cache it in our global varible
 
