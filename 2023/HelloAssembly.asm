@@ -142,6 +142,12 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:DWORD
         call    CreateWindowExA                     ;12 parameters?!? YIKES
     ;cmp compair x to y, same as x - y
         cmp     eax, NULL
+    ;jmp jump unconditional
+    ;jc/jnc --> jump if carry | not carry
+    ;je/jne --> jump if zero | not zero
+    ;js/jns --> jump if sign | not sign
+    ;jo/jno --> jump if overflow | not overflow
+    ;jp/jnp --> jump if parity | not parity
 
         je      WinMainRet                          ; Fail and bail
         mov     hwnd, eax
