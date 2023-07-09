@@ -140,6 +140,7 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:DWORD
         push    OFFSET ClassName
         push    0
         call    CreateWindowExA                     ;12 parameters?!? YIKES
+    ;cmp compair x to y, same as x - y
         cmp     eax, NULL
 
         je      WinMainRet                          ; Fail and bail
