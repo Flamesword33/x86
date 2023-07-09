@@ -66,6 +66,7 @@ MainEntry:
     ;   MOV R8W, x[y]                   ; indirect (memlocation x+y)
     ;   MOV AL, [RIP]                   ; RIP-relative x86-64 only, RIP points to the next instruction in this case push NULL on line 70
 
+    ;push saves the variable to the stack, pop does the opposite
         push    NULL                    ; Get the instance handle of our app (NULL means ourselves)
         call    GetModuleHandle         ; GetModuleHandle will return instance handle in EAX
         mov     hInstance, eax          ; Cache it in our global varible
