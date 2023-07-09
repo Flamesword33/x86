@@ -102,7 +102,9 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:DWORD
         LOCAL   hwnd:HWND    
 
         mov     wc.cbSize, SIZEOF WNDCLASSEX            ; Fill in the values in the members of our windowclass
+    ;or 
         mov     wc.styles, CS_HRDRAW or CS_VREDRAW      ; Redraw if resized in either dimension
+    ;OFFSET
         mov     wc.lpfnWndProc, OFFSET WndProc          ; Our callback function to handle window messages
         mov     wc.cbClsExtra, 0                        ; No extra class data
         mov     wc.cbWndExtra, 0                        ; No extra window data
@@ -152,3 +154,4 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:DWORD
         je      WinMainRet                          ; Fail and bail
         mov     hwnd, eax
 
+    ;left video at 26:32
